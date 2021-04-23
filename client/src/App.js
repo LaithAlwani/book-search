@@ -9,7 +9,7 @@ import Jumbotron from "./components/Jumbotron";
 function App() {
   return (
     <Router>
-      <Navbar />;
+      <Navbar />
       <div className="container-fluid">
         <Jumbotron />
         <Route exact path={"/"} component={SearchContainer} />
