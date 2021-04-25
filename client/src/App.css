@@ -1,5 +1,8 @@
 .jumbotron{
-  background-image: url("https://lizfreecom.files.wordpress.com/2016/09/books-banner-140.jpg");
+  background-image: url("https://free4kwallpapers.com/uploads/originals/2015/10/24/books.jpg");
+  background-size: cover;
+  background-repeat: no-repeat ;
+  background-position: center ;
   color: white;
   text-shadow: 2px 2px 10px black;
 }
