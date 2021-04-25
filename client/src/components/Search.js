@@ -2,18 +2,18 @@ import React from "react";
 
 function Search({ handleSearchClick, handleInputChange }) {
   return (
-    <div className="">
+    <form onSubmit={handleSearchClick}>
       <label htmlFor="book-title">Book title:</label>
       <input className="form-control" name="book-title" type="text"  onChange={handleInputChange}/>
       <div className="text-right">
         <button
+          type="submit"
           className="btn btn-success text-right mt-3"
-          onClick={handleSearchClick}
         >
           Search
         </button>
       </div>
-    </div>
+    </form>
   );
 }
 

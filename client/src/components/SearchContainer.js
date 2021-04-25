@@ -16,12 +16,25 @@ function SearchContainer() {
 
   function handleSearchClick(event) {
     event.preventDefault();
-    API.getBooks(bookSearch)
+    API.searchBooks(bookSearch)
       .then((res) => {
         console.log(res.data.items)
         setBooks(res.data.items);
       })
       .catch((err) => console.log(err));
+  }
+
+  function handleAddBook(book){
+    API.saveBook({
+      title:book.volumeInfo.title,
+      description:book.searchInfo.textSnippet,
+      image:book.volumeInfo.imageLinks.thumbnail,
+      authors:book.volumeInfo.authors,
+      link:book.volumeInfo.canonicalVolumeLink,
+      bookId:book.id
+    })
+    .then(res => console.log(res))
+    .catch(err=>console.log(err));
   }
 
   return (
@@ -30,7 +43,7 @@ function SearchContainer() {
         handleSearchClick={handleSearchClick}
         handleInputChange={handleInputChange}
       />
-      {books && <Results books={books} />}
+      {books && <Results books={books} handleAddBook={handleAddBook} />}
     </>
   );
 }
