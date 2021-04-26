@@ -15,7 +15,7 @@ function MyBooks() {
   }
 
   function handleDeleteBtn(id){
-      console.log("handleDeleteBtn function")
+    console.log(id);
       API.deleteBook(id)
       .then(res=> loadBooks())
       .catch(err=>console.log(err));

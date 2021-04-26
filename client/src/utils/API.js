@@ -13,7 +13,6 @@ export default {
     return axios.get("/api/books");
   },
   deleteBook: id => {
-    console.log("delete book api")
     return axios.delete("/api/books/" + id);
   },
   saveBook: function(bookData) {
