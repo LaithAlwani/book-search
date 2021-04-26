@@ -17,8 +17,7 @@ function SearchContainer() {
   function handleSearchClick(event) {
     event.preventDefault();
     API.searchBooks(bookSearch)
-      .then((res) => {
-        console.log(res.data.items)
+      .then(res => {
         setBooks(res.data.items);
       })
       .catch((err) => console.log(err));
@@ -33,7 +32,7 @@ function SearchContainer() {
       link:book.volumeInfo.canonicalVolumeLink,
       bookId:book.id
     })
-    .then(res => console.log(res))
+    .then()
     .catch(err=>console.log(err));
   }
 

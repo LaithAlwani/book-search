@@ -7,7 +7,7 @@ import MyBooks from "./pages/MyBooks"
 import Jumbotron from "./components/Jumbotron";
 
 function App() {
- console.log(process.env.REACT_APP_GOOGLE_API_KEY);
+ console.log(process.env);
   return (
     <Router>
       <Navbar />
