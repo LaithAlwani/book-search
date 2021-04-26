@@ -13,6 +13,13 @@ function MyBooks() {
       .then((res) => setMyBooks(res.data))
       .catch((err) => console.log(err));
   }
+
+  function handleDeleteBtn(id){
+      console.log("handleDeleteBtn function")
+      API.deleteBook(id)
+      .then(res=> loadBooks())
+      .catch(err=>console.log(err));
+  }
   return (
     <div>
         <h3>MyBooks</h3>
@@ -35,7 +42,7 @@ function MyBooks() {
                 >
                   preview
                 </a>
-                <button className="btn btn-danger ml-2">Delete</button>
+                <button className="btn btn-danger ml-2" onClick={()=>handleDeleteBtn(book._id)}>Delete</button>
               </div>
             </div>
           </div>

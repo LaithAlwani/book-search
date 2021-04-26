@@ -11,4 +11,10 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  deleteBook: (req,res) => {
+      db.Book.findOneAndDelete(req.params.id)
+      .then(dbModel => res.json(dbModel))
+      .catch(err => console.log(err));
+  }
 };

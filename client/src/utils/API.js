@@ -4,12 +4,13 @@ import axios from "axios";
 // It accepts a "query" or term to search the recipe api for
 export default {
   searchBooks: function(query) {
-    return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}+intitle&printType=books&key=${proccess.env.REACT_APP_GOOGLE_API_KEY}`);
+    return axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}+intitle&printType=books&key=${process.env.REACT_APP_GOOGLE_API_KEY}`);
   },
   getBooks: ()=>{
     return axios.get("/api/books");
   },
-  deleteBook: function(id) {
+  deleteBook: id => {
+    console.log("delete book api")
     return axios.delete("/api/books/" + id);
   },
   saveBook: function(bookData) {
