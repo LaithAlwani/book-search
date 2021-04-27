@@ -7,8 +7,8 @@ function Results({ books, handleAddBook }) {
       {books.map(book  => (
         <div key={book.id} className="card mb-3">
           <div className="row no-gutters">
-            <div className="col-md-2">
-              <img src={book.volumeInfo.imageLinks.thumbnail} alt="" />
+            <div className="col-md-2 ">
+              <img className="center-block " src={book.volumeInfo.imageLinks.thumbnail} alt="" />
             </div>
             <div className="col-md-10">
               <div className="card-body">

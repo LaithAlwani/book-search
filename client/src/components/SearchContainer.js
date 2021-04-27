@@ -17,9 +17,7 @@ function SearchContainer() {
   function handleSearchClick(event) {
     event.preventDefault();
     API.searchBooks(bookSearch)
-      .then(res => {
-        setBooks(res.data.items);
-      })
+      .then(res => setBooks(res.data.items))
       .catch((err) => console.log(err));
   }
 

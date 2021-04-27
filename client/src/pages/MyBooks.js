@@ -27,7 +27,7 @@ function MyBooks() {
         <div key={book._id} className="card mb-3">
           <div className="row no-gutters">
             <div className="col-md-2">
-              <img src={book.image} alt="" />
+              <img className="center-block" src={book.image} alt="" />
             </div>
             <div className="col-md-10">
               <div className="card-body">
