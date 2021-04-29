@@ -1,29 +1,34 @@
-# Create React Express App
+# Book Search           [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 
-## About This Boilerplate
+## Table of Content:
+1.[Description](#Description)
 
-This setup allows for a Node/Express/React app which can be easily deployed to Heroku.
+2.[Installation Instructions](#Installation-Instructions)
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
+3.[Usage Information](#Usage-Information)
 
-## Starting the app locally
+4.[License](#License)
 
-Start by installing front and backend dependencies. While in this directory, run the following command:
+5.[Questions](#Questions)
 
-```
-npm install
-```
 
-This should install node modules within the server and the client folder.
+## Description:
+a simple book search that use's googles API and ReactJs , where the user can search for book and store his favourits in a list.
 
-After both installations complete, run the following command in your terminal:
+## Installation Instructions:
+* install the lastest nodeJS 
+* run "npm i" to install dependecies 
 
-```
-npm start
-```
+## Usage Information:
+* visit [Book Search](https://book-search-4356.herokuapp.com/) 
+* Enter the name of a book and press the enterkey or click the search button 
+* The book results will display the title, authors, image,  link to book in google store, +mybooks button
+* clicking the myBooks button addes that book your collection of books
+![](./images/booksearch.png)
 
-Your app should now be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
+## License:
+This application is covered under the [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT).    
 
-## Deployment (Heroku)
-
-To deploy, simply add and commit your changes, and push to Heroku. As is, the NPM scripts should take care of the rest.
+## Questions:
+* Github: [laithalwani](https://github.com/laithalwani)
+* laithalwani@gmail.com
