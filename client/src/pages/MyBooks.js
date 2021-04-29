@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
+import Message from "../components/Message";
 import API from "../utils/API";
 
 function MyBooks() {
   const [myBooks, setMyBooks] = useState([]);
+  const [message,setMessage] = useState("");
 
   useEffect(() => {
     loadBooks();
-  }, []);
+  }, [handleDeleteBtn]);
 
   function loadBooks() {
     API.getBooks()
@@ -17,12 +19,16 @@ function MyBooks() {
   function handleDeleteBtn(id){
     console.log(id);
       API.deleteBook(id)
-      .then(res=> loadBooks())
+      .then(res=> {
+        setMessage(res.data);
+      })
       .catch(err=>console.log(err));
   }
   return (
     <div>
+      {message && <Message message={message} />}
         <h3>MyBooks</h3>
+        {myBooks.length=== 0 && <p>No books have been added to your list ...</p>}
       {myBooks.map((book) => (
         <div key={book._id} className="card mb-3">
           <div className="row no-gutters">

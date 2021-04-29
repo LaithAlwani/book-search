@@ -7,7 +7,6 @@ import MyBooks from "./pages/MyBooks"
 import Jumbotron from "./components/Jumbotron";
 
 function App() {
- console.log(process.env);
   return (
     <Router>
       <Navbar />

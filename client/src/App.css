@@ -11,3 +11,11 @@
   display: block;
   margin:  1rem auto;
 }
+
+.alert{
+  position: fixed;
+  top: 1rem;
+  z-index:  1;
+  width: 25%;
+  left: calc(100vh - 500px);
+}
